@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+*{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.main-div{
+  position: relative;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #85C4ED;
+}
+.loader{
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #58ACE3;
+}
+.loder-design{
+  position: absolute;
+  border: 16px solid #f3f3f3;
+  top: calc(50vh - 60px);
+  left: calc(50vw - 60px);
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+.loader-text{
+  position: absolute;
+  top: 50vh;
+  left: calc(50vw - 23px);
+  color: #3498db;
+}
+.question-conatiner{
+  position: relative;
+  margin: 40px auto;
+  max-width: 400px;
+}
+.question-tab{
+  position: relative;
+}
+.question-header{
+  padding: 20px 10px;
+  color: #EAF6FE;
+  text-align: center;
+}
+.quiz-answer-header{
+  color: #5EABDD;
+  text-align: center;
+}
+.quiz-answer-tab-container{
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+.answer-tab{
+  background-color: #3C8FC5;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  transition: ease;
+}
+.answer-tab:hover{
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.answer{
+  text-align: center;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: 700;
+  color: #EAF6FE;
+}
+
+
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
